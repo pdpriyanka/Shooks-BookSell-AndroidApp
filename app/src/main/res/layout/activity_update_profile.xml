@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.cs442.project.team13.RoundedImageView
+                    android:id="@+id/profile_photo"
+                    android:src="@drawable/personhead"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="@dimen/post_book_activity_horizontal_margin"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"
+                    android:id="@+id/update_name"
+                    android:layout_weight="0.70"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/passsword"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"
+                    android:id="@+id/update_password"
+                    android:layout_weight="0.70"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type Again"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"
+                    android:id="@+id/update_confpass"
+                    android:layout_weight="0.70"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginBottom="@dimen/post_book_activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:inputType="phone"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"
+                    android:id="@+id/update_phone"
+                    android:layout_weight="0.70"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:weightSum="1"
+        android:layout_margin="@dimen/post_book_activity_horizontal_margin">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/update_profile"
+            android:onClick="updateUser"
+            android:text="Save"
+            android:background="@drawable/button_gradient"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"/>
+        <Button
+            android:id="@+id/update_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Change Photo"
+            android:background="@drawable/button_gradient"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+            />
+    </LinearLayout>
+        </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

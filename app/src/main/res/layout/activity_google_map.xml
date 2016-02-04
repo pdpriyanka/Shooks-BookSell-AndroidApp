@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/book_location_message"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/hnt_et_location"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:background="@drawable/spinnergradient"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="2"/>
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_find"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_gradient"
+            android:textSize="18dp"
+            android:layout_weight="0.5"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+    <fragment
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+       />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="saveLocation"
+            android:layout_weight="1"
+            android:text="@string/button_save"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_gradient"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="cancel"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_gradient"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

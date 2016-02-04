@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="category" type="id">categoty</item>
+    <item name="sell" type="id">sell</item>
+    <item name="profile" type="id">profile</item>
+    <item name="logout" type="id">logout</item>
+    <item name="wishlist" type="id">wishlist</item>
+    <item name="setting" type="id">setting</item>
+</resources>

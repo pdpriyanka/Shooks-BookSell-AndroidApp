@@ -1,0 +1,270 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" tools:context="com.cs442.team13.UpdateBookInfoActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_information"
+                android:textSize="10pt"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.parse.ParseImageView
+                    android:id="@+id/book_image"
+                    android:src="@drawable/add_book_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="@dimen/post_book_activity_horizontal_margin"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/isbn"
+                    android:textSize="18dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.25"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"
+                    android:id="@+id/isbn"
+                    android:layout_weight="0.70"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.25"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:layout_weight="0.70"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.25"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/author"
+                    android:layout_weight="0.70"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/condition"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/new1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new1"
+                        android:onClick="onRadioButtonClicked"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"
+                        />
+
+                    <RadioButton android:id="@+id/likenew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/likenew"
+                        android:onClick="onRadioButtonClicked"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+
+
+                    <RadioButton android:id="@+id/used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/used"
+                        android:onClick="onRadioButtonClicked"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                    <RadioButton android:id="@+id/damaged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/damaged"
+                        android:onClick="onRadioButtonClicked"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/post_book_activity_horizontal_margin"
+                    android:layout_weight="0.25"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:numeric="decimal"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/price"
+                    android:layout_weight="0.75"
+                    android:singleLine="true"
+                    android:textSize="17dp"
+                    android:textColor="@color/wheat"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:gravity="center_horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_location"
+                    android:id="@+id/setlocation"
+                    android:onClick="setLocation"
+                    android:background="@drawable/button_gradient"
+                    android:textSize="18dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:textAllCaps="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update"
+                    android:id="@+id/update"
+                    android:onClick="update"
+                    android:background="@drawable/button_gradient"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:textAllCaps="false"
+
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:id="@+id/cancel"
+                    android:onClick="cancel"
+                    android:background="@drawable/button_gradient"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

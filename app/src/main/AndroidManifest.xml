@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cs442.project.team13" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.cs442.project.team13.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.cs442.project.team13.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.cs442.project.team13.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.cs442.project.team13.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".ShooksApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MainPage"
+            android:label="">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchBookResultsActivity" />
+        </activity>
+        <activity
+            android:name=".SearchBookResultsActivity"
+            android:label="Search Result"
+            android:theme="@style/Theme.MyCompatTheme"
+            android:launchMode="singleTop">
+
+            <!-- to identify this activity as "searchable" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.example.ExampleActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".WishListResult"
+            android:label="Wish List" />
+        <activity
+            android:name=".Details"
+            android:label="Details" />
+        <activity
+            android:name=".UserSettingActivity"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".BookCategoryActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_book_category" >
+        </activity>
+        <activity
+            android:name=".PostBookActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_post_book" >
+        </activity>
+        <activity
+            android:name=".DisplayBookInfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_display_book_info" >
+        </activity>
+        <activity
+            android:name=".DisplayProviderInfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_display_provider_info" >
+        </activity>
+        <activity
+            android:name=".DisplayUserBookListActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_display_user_book_list" >
+        </activity>
+        <activity
+            android:name=".UpdateBookInfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_update_book_info" >
+        </activity>
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+        <activity
+            android:name=".CategorySearch"
+            android:label="@string/title_activity_category_search" >
+        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name=".DisplayBookLocationActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_display_book_location" >
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+        <!--
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.cs442.project.team13" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/book126" />
+
+        <activity
+            android:name=".PurchaseReceipt"
+            android:label="@string/title_activity_purchase_receipt" >
+        </activity>
+    </application>
+
+</manifest>

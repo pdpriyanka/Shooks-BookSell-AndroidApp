@@ -1,0 +1,426 @@
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.cs442.team13.DisplayBookInfoActivity"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/activity_horizontal_margin">
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.parse.ParseImageView
+                    android:id="@+id/book_image"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="@dimen/post_book_image_horizontal_margin"/>
+                   </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/isbn"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isbn"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/author"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/author"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/condition"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/condition"
+                    android:layout_weight="0.50">
+
+                    <RadioButton android:id="@+id/new1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new1"
+                        android:clickable="false"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                    <RadioButton android:id="@+id/likenew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/likenew"
+                        android:clickable="false"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                    <RadioButton android:id="@+id/used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/used"
+                        android:clickable="false"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                    <RadioButton android:id="@+id/damaged"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/damaged"
+                        android:clickable="false"
+                        android:textSize="17dp"
+                        android:textColor="@color/wheat"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categories"
+                android:textSize="18dp"
+                android:textColor="@color/lovender"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stateb"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/university"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/universityb"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="18dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/department"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/departmentb"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/class1"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginRight="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/class1b"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/professor"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.40"
+                    android:gravity="start"
+                    android:layout_marginEnd="2pt"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/professorb"
+                    android:layout_weight="0.60"
+                    android:textColor="@color/wheat"
+                    android:textSize="17dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:id="@+id/book_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Button_view_location"
+                android:onClick="showBookLocation"
+                android:background="@drawable/button_gradient"
+                android:textAllCaps="false"
+                android:layout_margin="20dp"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2.5"
+                />
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:background="@drawable/button_gradient"
+                android:textAllCaps="false"
+                android:layout_margin="20dp"
+                android:text="Buy"
+                android:id="@+id/buyButton"
+                android:onClick="buyBook"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/post_book_activity_horizontal_margin">
+            <Button
+                android:id="@+id/provider_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_provider_info"
+                android:textSize="18dp"
+                android:onClick="showProviderInfo"
+                android:background="@drawable/button_gradient"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+

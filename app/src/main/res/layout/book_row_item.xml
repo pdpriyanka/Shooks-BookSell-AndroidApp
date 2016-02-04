@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+    android:background="@drawable/rowbg">
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="17dp"
+        android:textColor="@color/wheat"
+        android:layout_marginBottom="2px"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/delete_button1"
+            android:id="@+id/delete"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/update_button1"
+            android:id="@+id/update"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</LinearLayout>

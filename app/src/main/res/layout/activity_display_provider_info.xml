@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cs442.team13.DisplayProviderInfoActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <com.parse.ParseImageView
+        android:id="@+id/provider_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/post_book_image_horizontal_margin"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.20"
+            android:gravity="start"
+            android:layout_marginEnd="2px"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_weight="0.50"
+            android:textColor="@color/wheat"
+            android:gravity="start"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.20"
+            android:gravity="start"
+            android:layout_marginEnd="2px"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:layout_weight="0.50"
+            android:textColor="@color/wheat"
+            android:gravity="start"
+            android:textSize="17dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.20"
+            android:gravity="start"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber"
+            android:layout_weight="0.40"
+            android:textColor="@color/wheat"
+            android:gravity="start"
+            android:textSize="17dp"/>
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:onClick="dialPhone"
+            android:layout_weight="0.10"
+            android:layout_gravity="start"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

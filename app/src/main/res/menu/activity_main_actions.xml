@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="@string/menu_search"
+        appcompat:actionViewClass="android.support.v7.widget.SearchView"
+        appcompat:showAsAction="always"/>
+    <!-- category-->
+    <item android:id="@+id/action_category"
+        android:icon="@drawable/categories1"
+        android:title="Categories"
+        app:showAsAction="always" />
+
+    <!-- sell list-->
+    <item android:id="@+id/action_sell"
+        android:icon="@drawable/dollar"
+        android:title="Sell"
+        app:showAsAction="ifRoom" />
+
+    <!-- wish list -->
+    <item android:id="@+id/action_wishlist"
+        android:icon="@drawable/favorite21"
+        android:title="Wishlist"
+        app:showAsAction="ifRoom"/>
+
+    <!-- update profile -->
+    <item android:id="@+id/action_profile"
+        android:icon="@drawable/business12"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+    <!-- setting -->
+    <item android:id="@+id/setting"
+        android:title="Settings"
+        android:icon="@drawable/android_settings_iconsmall"
+        app:showAsAction="ifRoom" />
+    <!-- lot out -->
+    <item android:id="@+id/action_logout"
+        android:icon="@drawable/logout13"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>

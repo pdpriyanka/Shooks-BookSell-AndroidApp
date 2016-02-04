@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/books"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_blue">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/srno"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2px"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/isbn"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2px"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2px"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/author"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2px"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchResult"
+         />
+
+    <LinearLayout
+        android:id="@+id/searchMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/post_book_image_horizontal_margin"/>
+</LinearLayout>

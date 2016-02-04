@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cs442.team13.DisplayUserBookListActivity">
+
+    <item android:id="@+id/post" android:title="@string/post_book"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
+</menu>
